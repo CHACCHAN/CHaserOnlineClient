@@ -66,7 +66,7 @@ class CHaserOnlineClient:
   def action(self):
     self.message(message='Action')
     while self._code.find('command2=')>-1:
-      self._response = self._session.get(f'{self._url}GetReadyCheck?command2=wu')
+      self._response = self._session.get(f'{self._url}CommandCheck?command2=wu')
       self.htmlReplace()
   
   def complete(self):
@@ -119,9 +119,9 @@ class CHaserOnlineClient:
 
 Instance = CHaserOnlineClient(
   url='http://www7019ug.sakura.ne.jp/CHaserOnline003/user/',
-  user='cool15',
+  user='cool19',
   password='cool',
-  room=6066,
+  room=6070,
 )
 
 Instance.main()
